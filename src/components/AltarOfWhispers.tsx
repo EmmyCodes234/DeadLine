@@ -67,8 +67,6 @@ export function AltarOfWhispers({
   const [newCharDesc, setNewCharDesc] = useState('');
   const [newResearchTitle, setNewResearchTitle] = useState('');
   const [newResearchUrl, setNewResearchUrl] = useState('');
-  const [synopsisExpanded, setSynopsisExpanded] = useState(true);
-  const [goalExpanded, setGoalExpanded] = useState(false);
 
   // Update synopsis when active document changes
   useEffect(() => {

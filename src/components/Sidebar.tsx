@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 import { type CryptItem } from '@/hooks/useCrypt';
 import clsx from 'clsx';
 import { GothicIcon } from './GothicIcon';
-import { DoorOpen, Trash2, PenTool, BookOpen, ChevronLeft, X } from 'lucide-react';
+import { DoorOpen, Trash2, BookOpen, ChevronLeft, X } from 'lucide-react';
 import { horrorAudio } from '@/lib/audio/HorrorAudio';
 
 interface SidebarProps {

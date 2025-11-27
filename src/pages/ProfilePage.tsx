@@ -1,15 +1,14 @@
 import { useAuth } from '../hooks/useAuth';
 import { useGameProgress } from '../hooks/useGameProgress';
 import { GAME_LEVELS } from '../data/gameLevels';
-import { Skull, BookOpen, Feather } from 'lucide-react';
+import { Skull } from 'lucide-react';
 import { Navigation } from '../components/Navigation';
 
 export function ProfilePage() {
   const { user } = useAuth();
   const { levelProgress, unlockedLevelIds, totalSkulls } = useGameProgress();
 
-  const completedLevels = unlockedLevelIds.length - 1;
-  const totalLevels = GAME_LEVELS.length;
+
   
   // Calculate total words written
   const totalWords = Object.values(levelProgress).reduce((sum, parts) => {

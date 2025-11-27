@@ -14,7 +14,7 @@ interface CompileModalProps {
 export function CompileModal({ isOpen, onClose, cryptItems, projectTitle }: CompileModalProps) {
   const [fileName, setFileName] = useState(projectTitle);
   const [includeTitlePage, setIncludeTitlePage] = useState(true);
-  const [includeTableOfContents, setIncludeTableOfContents] = useState(false);
+  const [includeTableOfContents] = useState(false);
   const [mausoleumPageBreak, setMausoleumPageBreak] = useState(false);
   const [tombstonePageBreak, setTombstonePageBreak] = useState(true);
   const [excludedIds, setExcludedIds] = useState<Set<string>>(new Set());

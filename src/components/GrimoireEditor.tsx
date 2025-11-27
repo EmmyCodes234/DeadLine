@@ -43,16 +43,17 @@ export function GrimoireEditor() {
   };
 
   // Handle closing a tab
-  const handleCloseTab = (id: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setOpenDocuments((prev) => prev.filter((doc) => doc.id !== id));
-    
-    // If closing active tab, switch to another
-    if (activeDocId === id) {
-      const remaining = openDocuments.filter((doc) => doc.id !== id);
-      setActiveDocId(remaining.length > 0 ? remaining[0].id : null);
-    }
-  };
+  // Commented out as unused - can be re-enabled if needed
+  // const handleCloseTab = (id: string, e: React.MouseEvent) => {
+  //   e.stopPropagation();
+  //   setOpenDocuments((prev) => prev.filter((doc) => doc.id !== id));
+  //   
+  //   // If closing active tab, switch to another
+  //   if (activeDocId === id) {
+  //     const remaining = openDocuments.filter((doc) => doc.id !== id);
+  //     setActiveDocId(remaining.length > 0 ? remaining[0].id : null);
+  //   }
+  // };
 
   // Memoize active document lookup for performance
   const activeDocument = useMemo(() => 
